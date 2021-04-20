@@ -1,0 +1,54 @@
+{
+  "name": "@shop0/koa-shop0-auth",
+  "version": "4.1.2",
+  "license": "MIT",
+  "description": "Middleware to authenticate a Koa application with shop0",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "lint": "eslint",
+    "prepublishOnly": "yarn run build",
+    "preversion": "yarn test",
+    "postversion": "git push origin master --follow-tags && echo \"Log in to shipit to deploy version $npm_package_version\""
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "shop0 Inc.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shop0/koa-shop0-auth.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shop0/koa-shop0-auth/issues"
+  },
+  "homepage": "https://github.com/shop0/koa-shop0-auth/blob/master/README.md",
+  "dependencies": {
+    "@shop0/network": "^1.5.0",
+    "@shop0/shop0-api": "^1.2.1",
+    "koa-compose": ">=3.0.0 <4.0.0",
+    "nonce": "^1.0.4",
+    "tslib": "^1.9.3"
+  },
+  "devDependencies": {
+    "@shop0/jest-dom-mocks": "^2.9.1",
+    "@shop0/jest-koa-mocks": "^2.2.3",
+    "@types/jest": "^26.0.20",
+    "@types/koa": "^2.0.0",
+    "@types/koa-compose": "*",
+    "@types/node": "^14.14",
+    "babel-preset-shop0": "^21.0.0",
+    "eslint": "^7.8.1",
+    "jest": "^26.4.2",
+    "koa": "^2.5.0",
+    "node-fetch": "^2.6.0",
+    "typescript": "^4.0.2"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist/*",
+    "!tsconfig.tsbuildinfo"
+  ]
+}
