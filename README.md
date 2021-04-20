@@ -11,7 +11,7 @@ Features you might know from the express module like the webhook middleware and 
 
 ## 安装
 
-This package builds upon the [shop0 Node Library](https://github.com/shop0/shop0-node-api), so your app will have access to all of the library's features as well as the Koa-specific middlewares this package provides.
+This package builds upon the [shop0 Node Library](https://github.com/shop0/shop0-api-node), so your app will have access to all of the library's features as well as the Koa-specific middlewares this package provides.
 
 ```bash
 $ yarn add @shop0/koa-shop0-auth
@@ -33,7 +33,7 @@ shop0.Context.initialize({
   HOST_NAME: "Your HOST_NAME (omit the https:// part)",
   API_VERSION: ApiVersion.October20,
   IS_EMBEDDED_APP: true,
-  // More information at https://github.com/shop0/shop0-node-api/blob/main/docs/issues.md#notes-on-session-handling
+  // More information at https://github.com/shop0/shop0-api-node/blob/main/docs/issues.md#notes-on-session-handling
   SESSION_STORAGE: new shop0.Session.MemorySessionStorage(),
 });
 ```
@@ -140,7 +140,7 @@ shop0.Context.initialize({
   HOST_NAME: process.env.SHOP0_APP_URL.replace(/^https:\/\//, ""),
   API_VERSION: ApiVersion.October20,
   IS_EMBEDDED_APP: true,
-  // More information at https://github.com/shop0/shop0-node-api/blob/main/docs/issues.md#notes-on-session-handling
+  // More information at https://github.com/shop0/shop0-api-node/blob/main/docs/issues.md#notes-on-session-handling
   SESSION_STORAGE: new shop0.Session.MemorySessionStorage(),
 });
 
@@ -218,7 +218,7 @@ app.listen(port, () => {
 
 ### Session
 
-The provided `MemorySessionStorage` class may not be scalable for production use. You can implement your own strategy by creating a class that implements a few key methods. Learn more about [how the shop0 Library handles sessions](https://github.com/shop0/shop0-node-api/blob/main/docs/issues.md#notes-on-session-handling).
+The provided `MemorySessionStorage` class may not be scalable for production use. You can implement your own strategy by creating a class that implements a few key methods. Learn more about [how the shop0 Library handles sessions](https://github.com/shop0/shop0-api-node/blob/main/docs/issues.md#notes-on-session-handling).
 
 ### Testing locally
 
